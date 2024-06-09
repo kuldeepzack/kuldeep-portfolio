@@ -549,6 +549,7 @@ video {
 .text {
   color: #fff;
   font-size: 17px;
+  text-align: justify !important
 }
 
 .address {
@@ -571,6 +572,7 @@ video {
 
 .resume .resume-item ul li {
   padding-bottom: 10px;
+  text-align: justify !important
 }
 
 .resume .resume-item:last-child {
