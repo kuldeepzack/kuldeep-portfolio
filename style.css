@@ -1326,7 +1326,7 @@ video {
   left: 17%;
   transform: translate(-11%, -50%);
   -ms-transform: translate(-50%, -50%);
-  text-align: justify;
+  text-align: center;
 }
 
 .portfolio_box:hover img {
@@ -1354,7 +1354,8 @@ video {
 
 .portfolio_link_box p {
   color: #fff;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 400;
   padding-bottom: 20px;
+  text-align: justify;
 }
