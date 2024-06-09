@@ -1354,8 +1354,8 @@ video {
 
 .portfolio_link_box p {
   color: #fff;
-  font-size: 13px;
+  font-size: 13px !important;
   font-weight: 400;
   padding-bottom: 20px;
-  text-align: justify;
+  text-align: justify !important;
 }
