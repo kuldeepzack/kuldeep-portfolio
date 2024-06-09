@@ -1326,7 +1326,7 @@ video {
   left: 17%;
   transform: translate(-11%, -50%);
   -ms-transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: justify;
 }
 
 .portfolio_box:hover img {
