@@ -253,4 +253,37 @@
     })
   });
 
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('bg-video');
+
+    if (video) {
+        // Function to attempt to play the video
+        const playVideo = () => {
+            video.play().catch((error) => {
+                console.log('Error attempting to play video:', error);
+            });
+        };
+
+        // Attempt to play the video immediately
+        playVideo();
+
+        // Fallback: play video on user interaction
+        const interactionEvents = ['click', 'touchstart'];
+        interactionEvents.forEach(event => {
+            document.addEventListener(event, playVideo, { once: true });
+        });
+
+        // For browsers that disable autoplay, unmute and play on user interaction
+        const enableAutoplay = () => {
+            video.muted = false;
+            playVideo();
+        };
+        
+        document.addEventListener('click', enableAutoplay, { once: true });
+        document.addEventListener('touchstart', enableAutoplay, { once: true });
+    }
+});
+
+
 })()
