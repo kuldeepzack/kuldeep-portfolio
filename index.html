@@ -556,17 +556,13 @@ l
     const video = document.getElementById('bg-video');
 
     if (video) {
-        // Function to attempt to play the video
         const playVideo = () => {
             video.play().catch((error) => {
                 console.log('Error attempting to play video:', error);
             });
         };
 
-        // Attempt to play the video immediately
         playVideo();
-
-        // Fallback: play video on user interaction
         const interactionEvents = ['click', 'touchstart'];
         interactionEvents.forEach(event => {
             document.addEventListener(event, playVideo, { once: true });
