@@ -318,7 +318,7 @@ video {
   height: 100vh;
   object-fit: cover;
   position: fixed;
-}
+} 
 
 #bg-video {
     width: 100%;
