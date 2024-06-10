@@ -76,7 +76,7 @@ l
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
-  <video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" playsinline>
+  <video id="bg-video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" playsinline>
     <source src="./assets/img/bg-video.mp4" type="video/mp4" />
   </video>
   <!-- ======= Hero Section ======= -->
@@ -520,14 +520,38 @@ l
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-document.addEventListener('DOMContentLoaded', function() {
+<!-- document.addEventListener('DOMContentLoaded', function() {
     const video = document.querySelector('video');
     if (video) {
         video.play().catch((error) => {
             console.log('Error attempting to play video:', error);
         });
     }
+}); -->
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('bg-video');
+    if (video) {
+        // Function to play video
+        const playVideo = () => {
+            video.play().catch((error) => {
+                console.log('Error attempting to play video:', error);
+            });
+        };
+
+        // Attempt to play the video immediately
+        playVideo();
+
+        // Fallback: play video on user interaction
+        const interactionEvents = ['click', 'touchstart'];
+        interactionEvents.forEach(event => {
+            document.addEventListener(event, () => {
+                playVideo();
+            }, { once: true }); // Ensure the handler is only triggered once
+        });
+    }
 });
+
 
 
 </body>
