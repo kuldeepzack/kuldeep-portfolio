@@ -326,6 +326,7 @@ video {
     object-fit: cover;
     position: fixed;
     z-index: -1; /* Ensure video is behind all other content */
+   background-color: black;
 }
 
 .section-bg {
