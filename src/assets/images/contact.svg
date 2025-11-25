@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="250" cy="250" r="230" fill="#F8F9FA" stroke="#E9ECEF" stroke-width="4"/>
+
+  <!-- Envelope -->
+  <rect x="125" y="250" width="250" height="140" rx="12" fill="#E9ECEF" stroke="#6C757D" stroke-width="4"/>
+  <path d="M125 250L250 320L375 250" stroke="#6C757D" stroke-width="4"/>
+  
+  <!-- Chat Bubble -->
+  <rect x="160" y="140" width="180" height="80" rx="15" fill="white" stroke="#6C757D" stroke-width="3"/>
+  <path d="M250 220 L265 240 L235 240 Z" fill="white" stroke="#6C757D" stroke-width="3"/>
+  
+  <!-- Message Lines -->
+  <rect x="180" y="160" width="140" height="6" rx="3" fill="#6C757D" opacity="0.7"/>
+  <rect x="180" y="180" width="110" height="6" rx="3" fill="#6C757D" opacity="0.5"/>
+  
+  <!-- Notification Badge -->
+  <circle cx="360" cy="130" r="18" fill="#DC3545" stroke="white" stroke-width="3"/>
+  <text x="353" y="138" fill="white" font-size="16" font-weight="bold">3</text>
+
+  <!-- Floating Dots -->
+  <circle cx="80" cy="400" r="10" fill="#6C757D" opacity="0.3"/>
+  <circle cx="420" cy="400" r="15" fill="#6C757D" opacity="0.3"/>
+  <circle cx="420" cy="100" r="12" fill="#6C757D" opacity="0.3"/>
+  <circle cx="80" cy="100" r="8" fill="#6C757D" opacity="0.3"/>
+</svg>
