@@ -1,0 +1,16 @@
+name: Anti Copy Protection
+
+on: [push]
+
+jobs:
+  protect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Repo Owner
+        run: |
+          if [ "$GITHUB_REPOSITORY_OWNER" != "kuldeepzack" ]; then
+            echo "❌ Unauthorized repository detected!"
+            exit 1
+          fi
+      - name: Allow
+        run: echo "Repo owner verified."
