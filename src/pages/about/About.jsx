@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './about.module.scss';
-import profileImg from '../../assets/profile.jpeg';
+import profileImg from '../../assets/profiles.jpg';
 import PureCounter from '@srexi/purecounterjs';
 import antdIcon from '../../assets/images/antd.svg'
 import htmlIcon from '../../assets/images/html5.svg'
