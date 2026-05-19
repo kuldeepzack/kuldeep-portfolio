@@ -73,7 +73,7 @@ const About = () => {
             <div className="col-lg-8">
               <h2>Frontend Developer | Building Scalable & Impactful Solutions.</h2>
               <p className="fst-italic py-3">
-                Frontend Developer with 2+ years of expertise in ReactJS, Redux Toolkit, and Zustand.
+                Frontend Developer with 3 years of expertise in ReactJS, Redux Toolkit, and Zustand.
                 Specializes in scalable, high-performance web apps using clean architecture and Vite. Focused on responsive UIs,
                 performance optimization, and UI/UX excellence. Delivers pixel-perfect, production-ready code in agile workflows.
 
