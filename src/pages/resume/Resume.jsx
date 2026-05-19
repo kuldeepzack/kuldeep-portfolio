@@ -64,7 +64,7 @@ const Resume = () => {
         <section id="resume" className={styles.resume}>
             <div className="container section-title" data-aos="fade-up">
                 <h2>Resume</h2>
-              <p className='text' style={{textAlign:"justify"}}>👋🏻 I'm Kuldeep Singh, a passionate software developer with 2+ years of experience in React, JavaScript, TypeScript, HTML/CSS, and modern tools like Git, GitHub, and JIRA, skilled in Agile practices and dedicated to building smooth, impactful digital experiences.</p>
+              <p className='text' style={{textAlign:"justify"}}>👋🏻 I'm Kuldeep Singh, a passionate software developer with 3+ years of experience in React, JavaScript, TypeScript, HTML/CSS, and modern tools like Git, GitHub, and JIRA, skilled in Agile practices and dedicated to building smooth, impactful digital experiences.</p>
             </div>
 
             <div className="container">
