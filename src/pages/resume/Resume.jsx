@@ -27,8 +27,24 @@ const Resume = () => {
 
     const experienceData = [
         {
+    position: "Frontend Developer",
+    period: "Nov 2025 - Present",
+    company: "TechMave Software (India)",
+    responsibilities: [
+        "Developed scalable SaaS web portals using ReactJS, TypeScript, Vite, and role-based access control.",
+        "Implemented OneSignal push notifications for real-time alerts and improved platform user engagement.",
+        "Integrated Context API, Redux Toolkit, and React Router for scalable and maintainable frontend architecture.",
+        "Worked in Agile Scrum teams through sprint planning, standups, code reviews, and retrospectives.",
+        "Built reusable component libraries for consistent UI design and improved frontend development efficiency.",
+        "Collaborated with backend teams and product managers to deliver responsive, business-aligned user interfaces.",
+        "Optimized application performance by preventing unnecessary component re-renders using React.memo, useCallback, and useMemo.",
+        "Implemented debouncing in search functionality to reduce API calls and improve user experience.",
+        "Improved rendering efficiency by splitting large components, using lazy loading, and optimizing state management."
+    ]
+},
+        {
             position: "Full-Stack Developer",
-            period: "August 2023 - October 2025",
+            period: "June 2023 - October 2025",
             company: "Gomilestone Pvt Ltd. (India)",
             responsibilities: [
                 "Collaborated with global teams and clients to ensure smooth, timely, and successful project delivery.",
