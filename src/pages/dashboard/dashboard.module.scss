@@ -1,109 +1,261 @@
-.dashboardWrp {
-  height: 100vh;
-  // position: relative;
-  // z-index: 1;
-}
-
 .hero {
   width: 100%;
   min-height: 100vh;
-  // position: relative;
-  padding-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  // background: rgba(255, 255, 255, 0.7);
-  // backdrop-filter: blur(5px);
+  padding-top: 100px;
+  position: relative;
+  overflow: visible;
 
   :global(.container) {
     position: relative;
     z-index: 2;
   }
+}
 
-  .profileImage {
-    display: flex;
-    justify-content: center;
+.profileContainer {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 991px) {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+/* Morphing floating glowing ring */
+.glowRing {
+  position: absolute;
+  inset: -15px;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--cyan-color) 50%, var(--pink-color) 100%);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  filter: blur(10px);
+  opacity: 0.75;
+  animation: morphGlow 10s linear infiniteAlternate, spinGlow 25s linear infinite;
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
+}
+
+.profileImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 8, 22, 0.85);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: morphGlow 10s linear infiniteAlternate, floatProfile 6s ease-in-out infinite;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05);
+
+  img {
+    max-width: 80%;
+    height: auto;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.4));
+    transition: transform 0.5s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.08) rotate(2deg);
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 991px) {
     align-items: center;
-    margin-bottom: 30px;
-
-    img {
-      max-width: 100%;
-      height: auto;
-      animation: float 6s ease-in-out infinite;
-    }
+    text-align: center;
   }
+}
 
-  // Typography
-  h2 {
-    margin: 0;
-    font-size: 64px;
-    font-weight: 700;
-    color: var(--accent-color);
-    // color: #212529;
-  }
+.greeting {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--cyan-color);
+  margin-bottom: 15px;
+  background: rgba(6, 182, 212, 0.1);
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  width: fit-content;
+}
 
-  p {
-    margin: 5px 0 0 0;
-    font-size: 26px;
-    color: #495057;
+.heroContent h2 {
+  font-size: 64px;
+  font-weight: 850;
+  line-height: 1.1;
+  margin: 0 0 15px 0;
+  background: linear-gradient(135deg, #ffffff 40%, #c084fc 80%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
 
-    span {
-      letter-spacing: 1px;
-      border-bottom: 2px solid var(--accent-color);
-    }
-  }
-
-  // Social links
-  .socialLinks {
-    margin-top: 25px;
-
-    a {
-      font-size: 20px;
-      display: inline-block;
-      color: #495057;
-      line-height: 1;
-      margin-right: 20px;
-      transition: 0.3s;
-
-      &:hover {
-        color: var(--accent-color);
-      }
-    }
-  }
-
-  // Responsive styles
   @media (max-width: 768px) {
-    .hero{
-      padding-top: 50px;
-    }
-    h2 {
-      font-size: 32px;
-    }
+    font-size: 40px;
+  }
+}
 
-    p {
-      font-size: 20px;
-    }
+.subTitle {
+  font-size: 28px;
+  font-weight: 500;
+  color: #cbd5e1;
+  margin-bottom: 20px;
 
-    .profileImage {
-      margin-bottom: 20px;
+  span {
+    color: var(--accent-color);
+    font-weight: 600;
+    position: relative;
+    border-bottom: 2px dashed rgba(168, 85, 247, 0.4);
+    padding-bottom: 2px;
+  }
 
-      img {
-        max-width: 80%;
-      }
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.description {
+  font-size: 16px;
+  color: #94a3b8;
+  max-width: 550px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  font-weight: 400;
+}
+
+/* Glowing CTA Buttons */
+.ctaGroup {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+
+  @media (max-width: 991px) {
+    justify-content: center;
+  }
+}
+
+.primaryBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--accent-color) 0%, #7e22ce 100%);
+  color: #ffffff;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(168, 85, 247, 0.5), 0 0 15px rgba(6, 182, 212, 0.2);
+    color: #ffffff;
+
+    i {
+      transform: translateX(4px);
     }
   }
 }
 
-@keyframes float {
+.secondaryBtn {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+}
+
+/* Social Buttons */
+.socialLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.socialIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  font-size: 18px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+/* Keyframes for morphing profile animations */
+@keyframes morphGlow {
   0% {
-    transform: translateY(0px);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
-
   50% {
-    transform: translateY(-20px);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
-
   100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+}
+
+@keyframes spinGlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatProfile {
+  0%, 100% {
     transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes morphGlow {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  50% {
+    border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
 }
